@@ -9,7 +9,7 @@
         {
             "access_key": "{{user `aws_access_key`}}",
 			"ami_name": "ubuntu-aws-base-{{timestamp}}",
-            "source_ami": "027378719919/ubuntu-aws-base-1593682159",
+            "source_ami": "ubuntu-aws-base-1593682159",
             "instance_type": "t2.micro",
             "region": "{{user `aws_region`}}",
             "secret_key": "{{user `aws_secret_key`}}",
