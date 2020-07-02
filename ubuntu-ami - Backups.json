@@ -4,7 +4,6 @@
         "aws_secret_key": "",
         "aws_region": "ap-southeast-2",
 		"aws_accountId": "027378719919"
-		"aws_amiid": "ami-04447886984f521cd"
     },
     "builders": [
         {
@@ -13,7 +12,7 @@
             "instance_type": "t2.micro",
             "region": "{{user `aws_region`}}",
             "secret_key": "{{user `aws_secret_key`}}",
-            "amiid": "{{user `aws_amiid`}}",
+            "source_ami_id": "ami-04447886984f521cd",
             "ssh_username": "ubuntu",
             "type": "amazon-ebs"
         }
