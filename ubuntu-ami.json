@@ -8,19 +8,10 @@
     "builders": [
         {
             "access_key": "{{user `aws_access_key`}}",
-            "ami_name": "ubuntu-aws-base-{{timestamp}}",
+            "ami_id": "ami-04447886984f521cd",
             "instance_type": "t2.micro",
             "region": "{{user `aws_region`}}",
             "secret_key": "{{user `aws_secret_key`}}",
-            "source_ami_filter": {
-              "filters": {
-              "virtualization-type": "hvm",
-              "ID": "ami-04447886984f521cd",
-              "root-device-type": "ebs"
-              },
-              "owners": ["{{user `aws_accountId`}}"],
-              "most_recent": true
-            },
             "ssh_username": "ubuntu",
             "type": "amazon-ebs"
         }
