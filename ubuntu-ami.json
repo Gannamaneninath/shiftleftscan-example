@@ -15,7 +15,7 @@
             "source_ami_filter": {
               "filters": {
               "virtualization-type": "hvm",
-              "id": "ami-04447886984f521cd",
+              "ID": "ami-04447886984f521cd",
               "root-device-type": "ebs"
               },
               "owners": ["{{user `aws_accountId`}}"],
