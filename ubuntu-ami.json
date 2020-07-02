@@ -8,7 +8,8 @@
     "builders": [
         {
             "access_key": "{{user `aws_access_key`}}",
-            "ami_id": "ami-04447886984f521cd",
+			"ami_name": "ubuntu-aws-base-{{timestamp}}",
+            "source_ami": "ami-04447886984f521cd",
             "instance_type": "t2.micro",
             "region": "{{user `aws_region`}}",
             "secret_key": "{{user `aws_secret_key`}}",
