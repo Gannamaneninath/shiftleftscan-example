@@ -32,5 +32,20 @@ jobs:
           command: build
           arguments: "-color=false -on-error=abort -var aws_access_key=${{ secrets.AWS_ACCESS_KEY }} -var aws_secret_key=${{ secrets.AWS_SECRET_KEY }}"
           target: ubuntu-ami.json
+          
+      # shiftleft scan 
+      - name: ShiftLeft Scan
+        uses: ShiftLeftSecurity/scan-action@master
+        env:
+            WORKSPACE: https://github.com/${{ github.repository }}/blob/${{ github.sha }}
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            SCAN_AUTO_BUILD: true
+        with:
+            output: reports
+     - name: Upload scan reports
+       uses: actions/upload-artifact@v1.0.0
+       with:
+        name: shiftleft-scan-reports
+        path: reports
 
       # additional steps to process artifacts
