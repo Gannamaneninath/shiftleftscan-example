@@ -38,5 +38,3 @@ jobs:
         uses: ShiftLeftSecurity/scan-action@master
         with:
           type: "credscan,python,depscan
-
-      # additional steps to process artifacts
