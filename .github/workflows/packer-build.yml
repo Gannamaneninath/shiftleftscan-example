@@ -33,7 +33,7 @@ jobs:
           arguments: "-color=false -on-error=abort -var aws_access_key=${{ secrets.AWS_ACCESS_KEY }} -var aws_secret_key=${{ secrets.AWS_SECRET_KEY }}"
           target: ubuntu-ami.json
           
-      # shiftleft scan 
+      # shiftleft scan example
       - name: ShiftLeft Scan
         uses: ShiftLeftSecurity/scan-action@master
         env:
