@@ -37,4 +37,5 @@ jobs:
       - name: Perform ShiftLeft Scan
         uses: ShiftLeftSecurity/scan-action@master
         with:
-          type: "credscan,python,depscan
+          type: "credscan,python,depscan"
+          
