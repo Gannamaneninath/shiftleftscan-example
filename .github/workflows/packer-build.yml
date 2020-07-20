@@ -41,7 +41,7 @@ jobs:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
             SCAN_AUTO_BUILD: true
         with:
-            output: reports
+          output: reports
      - name: Upload scan reports
        uses: actions/upload-artifact@v1.0.0
        with:
